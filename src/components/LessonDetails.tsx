@@ -1,5 +1,6 @@
-import { DiscordLogo, Lightning } from "phosphor-react";
+import { DiscordLogo, Lightning, FileArrowDown, ImageSquare } from "phosphor-react";
 import { Button } from "./Button";
+import { ContentCard } from "./ContentCard";
 import { Player } from "./Player";
 
 export function LessonDetails() {
@@ -43,8 +44,19 @@ export function LessonDetails() {
           </div>
         </div>
 
-        <div>
-
+        <div className="gap-8 mt-20 grid grid-cols-2">
+          <ContentCard
+            href="#"
+            aside={<FileArrowDown size={40} />}
+            title="Material Complementar"
+            description="Acesse o material complementar para acelerar seu desenvolvimento"
+          />
+          <ContentCard
+            href="#"
+            aside={<ImageSquare size={40} />}
+            title="Wallpapers exclusivos"
+            description="Baixe wallpapers exclusivos e personalize a sua máquina"
+          />
         </div>
       </div>
     </div>
