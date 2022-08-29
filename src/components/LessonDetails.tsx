@@ -58,6 +58,19 @@ export function LessonDetails() {
             description="Baixe wallpapers exclusivos e personalize a sua máquina"
           />
         </div>
+
+        <footer className="mt-20 pt-8 border-t border-gray-600 flex justify-between">
+          <span className="text-gray-400">
+            Todos os direitos reservados
+          </span>
+
+          <a
+            href="#"
+            className="text-gray-400 hover:underline"
+          >
+            Políticas de privacidade
+          </a>
+        </footer>
       </div>
     </div>
   )
