@@ -12,7 +12,7 @@ interface LessonProps {
 
 export function LessonCard(props: LessonProps) {
   const isLessonAvaiable = isPast(props.availableAt);
-  const availableDateFormated = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'm", {
+  const availableDateFormated = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm", {
     locale: ptBR
   })
   
@@ -24,7 +24,11 @@ export function LessonCard(props: LessonProps) {
 
       <Link
         to={`/event/lessons/${props.slug}`}
-        className="rounded border border-gray-500 p-4 mt-2 block hover:border-green-500 transition-colors"
+        className={`rounded border border-gray-500 p-4 mt-2 block ${
+          isLessonAvaiable
+          ? "hover:border-green-500 transition-colors"
+          : "pointer-events-none"}
+        `}
       >
         <header className="flex items-center justify-between">
           {isLessonAvaiable ? (
