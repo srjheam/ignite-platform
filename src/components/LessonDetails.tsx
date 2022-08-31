@@ -55,7 +55,7 @@ export function LessonDetails(props: { slug: string }) {
       <Player videoId={data.lesson.videoId} />
 
       <div className="p-8 pb-0 max-w-[1100px] mx-auto">
-        <div className="flex items-start gap-16">
+        <div className="flex items-start flex-wrap gap-16 lg:flex-nowrap">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">
               {data.lesson.title}
@@ -78,7 +78,7 @@ export function LessonDetails(props: { slug: string }) {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="w-full flex flex-col gap-4 lg:w-auto">
             <Button href="#" variant="primary">
               <DiscordLogo size={24} />
               Comunidade do Discord
@@ -90,7 +90,7 @@ export function LessonDetails(props: { slug: string }) {
           </div>
         </div>
 
-        <div className="gap-8 my-20 grid grid-cols-2">
+        <div className="gap-8 my-20 grid grid-cols-1 xl:grid-cols-2">
           <ContentCard
             href="#"
             aside={<FileArrowDown size={40} />}

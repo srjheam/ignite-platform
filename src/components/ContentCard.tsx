@@ -11,7 +11,7 @@ export function ContentCard(props: ContentCardProps) {
   return (
     <a
       href={props.href}
-      className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"   
+      className="pr-6 bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"   
     >
       <div className="bg-green-700 h-full p-6 flex items-center">
         {props.aside}
@@ -26,7 +26,7 @@ export function ContentCard(props: ContentCardProps) {
         </p>
       </div>
 
-      <div className="h-full p-6 flex items-center">
+      <div className="h-full ml-auto flex items-center">
         <CaretRight size={24} />
       </div>
     </a>
