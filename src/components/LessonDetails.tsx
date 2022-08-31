@@ -2,6 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import { DiscordLogo, Lightning, FileArrowDown, ImageSquare } from "phosphor-react";
 import { Button } from "./Button";
 import { ContentCard } from "./ContentCard";
+import { Footer } from "./Footer";
 import { Player } from "./Player";
 
 const GET_LESSON_BY_SLUG_QUERY = gql`
@@ -47,11 +48,13 @@ export function LessonDetails(props: { slug: string }) {
     )
   }
 
+  
+
   return (
     <div className="flex-1">
       <Player videoId={data.lesson.videoId} />
 
-      <div className="p-8 max-w-[1100px] mx-auto">
+      <div className="p-8 pb-0 max-w-[1100px] mx-auto">
         <div className="flex items-start gap-16">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">
@@ -87,7 +90,7 @@ export function LessonDetails(props: { slug: string }) {
           </div>
         </div>
 
-        <div className="gap-8 mt-20 grid grid-cols-2">
+        <div className="gap-8 my-20 grid grid-cols-2">
           <ContentCard
             href="#"
             aside={<FileArrowDown size={40} />}
@@ -102,18 +105,7 @@ export function LessonDetails(props: { slug: string }) {
           />
         </div>
 
-        <footer className="mt-20 pt-8 border-t border-gray-500 flex justify-between">
-          <span className="text-gray-300">
-            Todos os direitos reservados
-          </span>
-
-          <a
-            href="#"
-            className="text-gray-300 hover:underline"
-          >
-            Políticas de privacidade
-          </a>
-        </footer>
+        <Footer />
       </div>
     </div>
   )
