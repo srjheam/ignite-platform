@@ -32,7 +32,9 @@ export function Event() {
     const slug = getFirstLessonSlug()
     const navigate = useNavigate()
     
-    navigate(`/event/lessons/${slug}`)
+    if (slug) {
+      navigate(`/event/lessons/${slug}`)
+    }
   }
 
   return (
