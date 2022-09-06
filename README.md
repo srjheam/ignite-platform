@@ -1,6 +1,6 @@
 # Ignite Platform
 
-You may check it out on [Vercel](#).
+You may check it out on [Vercel](https://ignite-platform-sand.vercel.app/).
 
 ## Built With
 
