@@ -33,7 +33,17 @@ You may check it out on [Vercel](#).
     npm install --force
     ```
 
-4. Start development server and you're done
+4. Set up your local environment
+
+    Copy .env.local.example file to .env.local (which will be ignored by Git):
+    
+    ```bash
+    cp .env.local.example .env.local
+    ```
+
+    Add GraphQL API info.
+
+5. Start development server and you're done
 
     ```bash
     npm run dev
