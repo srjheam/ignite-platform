@@ -1,10 +1,11 @@
-import { gql, useMutation } from "@apollo/client";
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Icon";
 import { Input } from "../components/Input";
 import { useCreateSubscriberMutation } from "../graphql/generated";
+
+import BcCode from "../assets/bc-code.png";
 
 export function Subscribe() {
   const navigate = useNavigate()
@@ -57,7 +58,7 @@ export function Subscribe() {
           </div>
         </div>
         
-        <img src="src/assets/bc-code.png" alt="Code editor under floating icons" className="px-2" />
+        <img src={BcCode} alt="Code editor under floating icons" className="px-2" />
       </div>
 
       <div className="mx-6">
